@@ -101,7 +101,7 @@ const App = () => {
 <Fragment>
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
+        <div className="title">Sign Up</div>
         {isSubmitted ? 
         <section>
           {apiData.map((merchant) => {
