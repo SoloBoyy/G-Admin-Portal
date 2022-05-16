@@ -145,21 +145,25 @@ const App = () => {
                             </div>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-md-3" className='bottom'>
                             <div class="candidates-list-fav-btn text-right">
                                 <div class="fav-icon" className='heart'>
                                     <i class="mdi mdi-heart f-20"></i>
                                 </div>
-                                <div class="candidates-listing-btn mt-4">
-                                    <a href="#" class="btn btn-outline btn-sm" className='Hire'>Hire Applicant</a>
+                                <div class="candidates-listing-btn mt-4" className='Hire'>
+                                    <a href="#" class="btn btn-outline btn-sm" ><button type="button" class="btn btn-danger">Hire Applicant</button></a>
+                                    
                                 </div>
+                                
                             </div>
+                            
                         </div>
+                        <hr></hr>
                     
 
                     <div class="row">
                         <div class="col-lg-11 offset-lg-1">
-                            <div class="candidates-item-desc">
+                            <div class="candidates-item-desc" className='texter'>
                                
                                 <p class="text-muted mb-2 f-14">{merchant.bio}</p>
                             </div>
