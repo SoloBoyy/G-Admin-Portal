@@ -95,13 +95,17 @@ const App = () => {
       </form>
     </div>
   );
-  
+
+  let titleText = "Sign In"
+  if(isSubmitted == true){
+    titleText = "Applicants"
+  }
 
   return (
 <Fragment>
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign Up</div>
+        <div className="title">{titleText}</div>
         {isSubmitted ? 
         <section>
           {apiData.map((merchant) => {
@@ -116,22 +120,24 @@ const App = () => {
                 <div class="list-grid-item mt-4 p-2">
                     <div class="row">
                         <div class="col-md-9">
-                            <div class="candidates-img float-left mr-4">
-                                <img src={merchant.imgurl} alt="" class="img-fluid d-block rounded"/>
+                            <div class="candidates-img float-left mr-4" className='together'>
+                                <img src={merchant.imgurl} alt="" class="img-fluid d-block rounded" className='img'/>
+                                <h5 class="mb-2 f-19"><a class="text-dark" className='togetherTwo'>{merchant.name}</a></h5>
                             </div>
-                            <div class="candidates-list-desc job-single-meta  pt-2">
-                                <h5 class="mb-2 f-19"><a class="text-dark">{merchant.name}</a></h5>
+                            <div class="candidates-list-desc job-single-meta  pt-2" className='containerInfo'>
+                                
                                 <ul class="list-inline mb-0">
+                                  <div className='set'>
                                     <li class="list-inline-item mr-4">
                                         <p class="text-muted f-15 mb-0"><i class="mdi mdi-account mr-1"></i>{merchant.role}</p>
                                     </li>
 
-                                    <li class="list-inline-item mr-4">
+                                    <li class="list-inline-item mr-4" className='from'>
                                         <p class="f-15 mb-0"><a class="text-muted"><i class="mdi mdi-map-marker mr-1"></i>{merchant.city}, {merchant.state}</a></p>
                                     </li>
-
+                                    </div>
                                     <li class="list-inline-item">
-                                        <p class="text-muted f-15 mb-0"><i class="mdi mdi-currency-usd mr-1"></i>{merchant.hourly}/hour</p>
+                                        <p class="text-muted f-15 mb-0" className='hours'><i class="mdi mdi-currency-usd mr-1"></i>{merchant.hourly}/hour</p>
                                     </li>
                                 </ul>
                                 <p class="text-muted mt-1 mb-0">Skills: {merchant.skills}</p>
@@ -141,11 +147,11 @@ const App = () => {
 
                         <div class="col-md-3">
                             <div class="candidates-list-fav-btn text-right">
-                                <div class="fav-icon">
+                                <div class="fav-icon" className='heart'>
                                     <i class="mdi mdi-heart f-20"></i>
                                 </div>
                                 <div class="candidates-listing-btn mt-4">
-                                    <a href="#" class="btn btn-outline btn-sm">Hire Applicant</a>
+                                    <a href="#" class="btn btn-outline btn-sm" className='Hire'>Hire Applicant</a>
                                 </div>
                             </div>
                         </div>
