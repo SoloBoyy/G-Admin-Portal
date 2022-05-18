@@ -60,12 +60,25 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
+div.class_name, div.stretched {
+  height: 200px;
+  width: 200px;
+}
 
+div.class_name img {
+  max-width: 100%;
+  max-height: 100%;    
+}
+
+div.stretched img {
+  width: 100%;
+  height: 100%;
+}
 button.primary {
 	background-color: #03BFCB;
 	border: 1px solid #03BFCB;

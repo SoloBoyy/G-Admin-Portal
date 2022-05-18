@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { FaEnvelope } from "react-icons/fa";
 import { FaSearchLocation } from "react-icons/fa";
 import { FaPhone} from "react-icons/fa";
-import {GoogleLogin} from 'react-google-login'
 
 import "./App.css";
 import "./styles.css"
@@ -36,8 +35,8 @@ const App = () => {
   // User Login info
   const database = [
     {
-      username: "user1",
-      password: "pass1"
+      username: "management",
+      password: "Warhol1987!"
     },
     {
       username: "user2",
@@ -84,7 +83,7 @@ const App = () => {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>Username </label>
+          <label color = "white">Username </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
