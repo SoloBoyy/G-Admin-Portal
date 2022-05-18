@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { FaEnvelope } from "react-icons/fa";
 import { FaSearchLocation } from "react-icons/fa";
 import { FaPhone} from "react-icons/fa";
+import {GoogleLogin} from 'react-google-login'
 
 import "./App.css";
 import "./styles.css"
@@ -103,10 +104,28 @@ const App = () => {
   if(isSubmitted == true){
     titleText = "Applicants"
   }
+  // const responseGoogle = response =>{
+  //   console.log(response)
+  //   const{code}=response
+  // }
+  // const responseError = error =>{
+  //   console.log(error)
+  // }
 
   return (
 <Fragment>
-      
+      {/* <div>
+        <GoogleLogin clientId='246332284177-r9mpglt6s9bg02jfqgae789g9q4vclmn.apps.googleusercontent.com'
+        buttonText='Sign in to Authorize Calendar'
+        onSuccess={responseGoogle}
+        onFailure={responseError}
+        cookiePolicy={'single_host_origin'}
+        //
+        responseType='code'
+        accessType='offline'
+        scope='openid email profile https://www.googleapis.com/auth/calendar'
+        />
+      </div> */}
       <div className="login-form">
         
         <div className="title">{titleText}</div>
@@ -114,6 +133,7 @@ const App = () => {
         <section>
           {apiData.map((merchant) => {
                             return (
+                              <div className='carder'>
                               <div class="card-container">
                               <span class="pro">{merchant.role}: ${merchant.hourly} / hour </span>
                               
@@ -145,6 +165,7 @@ const App = () => {
                               </div>
                               <div>
                               <hr></hr>
+                            </div>
                             </div>
                             </div>
                             
