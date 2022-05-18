@@ -71,7 +71,7 @@ input[type="submit"]:hover {
   margin: 10px;
 } */
 .title{
-  margin-left: 50%;
+  text-align: center;
 }
 hr{
   margin: 30px;
